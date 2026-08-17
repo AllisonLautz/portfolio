@@ -122,7 +122,7 @@ hr {
 }
 
 quote {
-	background: #ffa8e8;
+	background: #ffa8e869;
     display: block;
     /* padding: 100px 100px 175px; */
 	padding: 15% 15% 30%;
@@ -138,6 +138,28 @@ quote p {
 
 quote + quote {
 	margin-top: 50px;
+}
+
+.wrapper {
+	display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.wrapper .row {
+	flex-basis: 100%;
+	@media(min-width: 768px) {
+		max-width: calc(50% - .75rem);
+		flex-basis: calc(50% - .75rem);
+	}
+}
+
+.wrapper .group {
+	padding: 10px 2rem;
+}
+
+.wrapper .row li {
+	margin-bottom: .5rem;
 }
 
 .row {
