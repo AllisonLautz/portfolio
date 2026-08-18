@@ -19,6 +19,15 @@ a:hover {
 	text-decoration: none;
 }
 
+a img {
+	transform: scale(1);
+	transition: .3s ease-in-out;
+}
+
+a:hover img {
+	transform: scale(1.025);
+}
+
 hr {
 	height: 90px;
     clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
@@ -172,7 +181,7 @@ quote + quote {
 	}
 }
 
-.row .project-image {
+.row > .project-image {
 	@media(min-width: 768px) {
 		max-width: calc(50% - .75rem);
 	}
