@@ -101,7 +101,7 @@ hr {
 }
 
 #intro hr {
-	clip-path: polygon(100% 0%, 0% 102%, 100% 100%);
+	clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
 }
 
 quote {
@@ -123,6 +123,11 @@ quote p {
 
 quote + quote {
 	margin-top: 50px;
+}
+
+#project-highlights hr { /* remove phantom line */
+	position: relative;
+	top: 1px;
 }
 
 .wrapper {
