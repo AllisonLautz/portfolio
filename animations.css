@@ -1,0 +1,173 @@
+
+/* Animations */
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideUp {
+	0% {
+		transform: translateY(100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes bob {
+	from {
+		transform: translateY(var(--translateYStart));
+	}
+	to {
+		transform: translateY(var(--translateYEnd));
+	}
+}
+
+@keyframes slideLeft {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideRight {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+
+
+
+@media (prefers-reduced-motion: no-preference) { /* only animate if user has NOT selected Prefers Reduced Motion. */
+	
+	.slideLeft, .slideRight {
+		animation-duration: .5s;
+		animation-delay: .5s;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: both;
+		animation-iteration-count: 1;
+	}
+
+	.slideLeft {
+		transform: translateX(100%);
+	}
+
+	.slideRight {
+		transform: translateX(-100%);
+	}
+
+	.slideLeft[data-screen*="entering"], 
+	.slideLeft[data-screen*="entered"], 
+	.slideLeft[data-screen*="exiting"] {
+		animation-name: slideLeft;
+	}
+
+	.slideRight[data-screen*="entering"], 
+	.slideRight[data-screen*="entered"], 
+	.slideRight[data-screen*="exiting"] {
+		animation-name: slideRight;
+	}
+
+	/* === Slide Up and Slide Down === */
+	/* all slide classes */
+	.slide {
+		animation-duration: .5s;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: both;
+		transform: translateY(0px);
+	}
+
+	/* scroll down, "pending" state (element not yet approaching screen). get ready to slide up from below. */
+	body[data-scroll-direction="down"] .slide[data-screen="pending"]{
+		transform: translateY(100px);
+		opacity: 0;
+	}
+
+	/* slide up from below */
+	body[data-scroll-direction="down"] .slide[data-screen="entering"]{
+		animation-name: slideUp;
+	}
+
+	/* scroll down, "exited" state. get ready to slide down from above if upscroll happens. */
+	body[data-scroll-direction="down"] .slide[data-screen="exited"]{
+		transform: translateY(-100px);
+	}
+
+	/* scroll down, "pending" state (element not yet approaching screen). get ready to slide down from above. */
+	body[data-scroll-direction="up"] .slide[data-screen="pending"]{
+		transform: translateY(-100px);
+	}
+
+	/* slide down from above */
+	body[data-scroll-direction="up"] .slide[data-screen="entering"]{
+		animation-name: slideDown;
+	}
+
+	/* scroll up, "exited" state. get ready to slide up from below if downscroll happens. */
+	body[data-scroll-direction="up"] .slide[data-screen="exited"]{
+		transform: translateY(100px);
+		opacity: 0;
+	}
+
+	/* body[data-scroll-direction="down"] .slide[data-screen="entered"],
+	body[data-scroll-direction="down"] .slide[data-screen="exiting"],
+	body[data-scroll-direction="up"] .slide[data-screen="entered"],
+	body[data-scroll-direction="up"] .slide[data-screen="exiting"] {
+		transform: translateY(0px);
+	} */
+
+
+	/* inertia scroll */
+
+	*:has( > .group__inertia-scroll) {
+		position: relative;
+	}
+	
+	.group__inertia-scroll {
+		min-height: 500px;
+	}
+	
+	.group__inertia-scroll figure {
+		position: absolute;
+		transition: .5s cubic-bezier(.5,.5,.83,.67);
+		margin: 0;
+		width: 100%;
+	}
+	
+	.group__inertial-scroll img {
+		
+		display: block;
+		width: 100%;
+		
+		animation-name: fadeIn;
+		animation-delay: 1.2s;
+		animation-fill-mode: both;
+		animation-timing-function: cubic-bezier(.5,.5,.83,.67);
+		animation-duration: .5s;
+	}
+}

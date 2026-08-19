@@ -8,8 +8,10 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="animations.css">
 	<link rel="icon" type="image/x-icon" href="./favicon.ico">
-
+	<script src="./js/isOnScreen.js" defer></script>
+	
 </head>
 <body>
 	
@@ -47,7 +49,7 @@
 			
 			<h2>Skills, Tools, etc.</h2>
 			<div class="wrapper">
-				<div class="row bg-white">
+				<div class="row bg-white isOnScreen slide">
 					<div class="group">
 						<h3>WordPress Ecosystem</h3>
 						<ul>
@@ -61,7 +63,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="row bg-white">
+				<div class="row bg-white isOnScreen slide">
 					<div class="group">
 						<h3>Languages</h3>
 						<ul>
@@ -73,7 +75,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="row bg-white">
+				<div class="row bg-white isOnScreen slide">
 					<div class="group">
 						<h3>Frameworks & Libraries</h3>
 						<ul>
@@ -83,7 +85,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="row bg-white">
+				<div class="row bg-white isOnScreen slide">
 					<div class="group">
 						<h3>Build Tools & Package Managers</h3>
 						<ul>
@@ -96,7 +98,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="row bg-white">
+				<div class="row bg-white isOnScreen slide">
 					<div class="group">
 						<h3>Hosting & Platforms (WordPress-specific)</h3>
 						<ul>
@@ -108,7 +110,7 @@
 						</ul>
 					</div>
 				</div>	
-				<div class="row bg-white">
+				<div class="row bg-white isOnScreen slide">
 					<div class="group">
 						<h3>Infrastructure & Servers</h3>
 						<ul>
@@ -119,7 +121,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="row bg-white">
+				<div class="row bg-white isOnScreen slide">
 					<div class="group">
 						<h3>Version Control & DevOps</h3>
 						<ul>
@@ -134,7 +136,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="row bg-white">
+				<div class="row bg-white isOnScreen slide">
 					<div class="group">
 						<h3>Design Tools</h3>
 						<ul>
@@ -145,7 +147,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="row bg-white">
+				<div class="row bg-white isOnScreen slide">
 					<div class="group">
 						<h3>Design & UX Practice</h3>
 						<ul>
@@ -161,7 +163,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="row bg-white">
+				<div class="row bg-white isOnScreen slide">
 					<div class="group">
 						<h3>Marketing & Content</h3>
 						<ul>
@@ -174,7 +176,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="row bg-white">
+				<div class="row bg-white isOnScreen slide">
 					<div class="group">
 						<h3>Business & Process</h3>
 						<ul>
@@ -193,9 +195,9 @@
 			
 			<h2>Nice Things Coworkers Have Said About Me</h2>
 			
-			<quote><p>"A fantastic job walking [Client] through all of the little details of the new design and making her feel comfortable and confident about the choices we made." - Principal Developer</p></quote>
+			<quote class="isOnScreen slideLeft"><p>"A fantastic job walking [Client] through all of the little details of the new design and making her feel comfortable and confident about the choices we made." - Principal Developer</p></quote>
 			
-			<quote><p>"[Client] wants to work with us even more for a bunch of reasons, but that extra mile you went with her, and considering what she needed, had a real impact." - Principal Developer</p></quote>
+			<quote class="isOnScreen slideRight"><p>"[Client] wants to work with us even more for a bunch of reasons, but that extra mile you went with her, and considering what she needed, had a real impact." - Principal Developer</p></quote>
 			
 		</div>
 	</section>
@@ -206,115 +208,125 @@
 			
 			<h2>Project Highlights</h2>
 			
-			<h3><a href="https://ms.now" target="_blank">MS NOW</a></h3>
-			<a href="https://ms.now" target="_blank"><img loading="lazy" src="project_msnow.png" class="project-image"></a>
-			
-			
-			<p>I'm proud to have been part of the team that built the new ms.now website during MSNBC's rebrand.</p>
-			
-			<h4>Scope</h4>
-			<ul>
-				<li>Full website migration with new branding</li>
-				<li>Maintain performance</li>
-				<li>Empower editors with an intuitive, scalable website interface</li>
-				<li>Limit access based on user role</li>
-				<li>Implement a mechanism for live blogging</li>
-				<li>Integrate 3rd party data to continuously update election information in real-time</li>
-			</ul>
-			
-			<h4>My Contribution</h4>
-			<ul>
-				<li>Front-end and back-end build-out of the homepage, Rachel Maddow Show page, author archives and pages, and more
-					<ul>
-						<li>Translated designs into pixel-perfect front-end output, while building back-end templates that were simple and scalable for the MS NOW editorial team.</li>
-					</ul>
-				</li>
-			</ul>
-			
-			<h4>Challenges</h4>
-			<ul>
-				<li>Large number of stakeholders</li>
-				<li>Tight deadlines</li>
-				<li>Managing changing expectations</li>
-			</ul>
-			
-			<h4>Outcome</h4>
-			<ul>
-				<li>Users average 25 minutes per session</li>
-			</ul>
-			
-			<h3><a href="https://atlassian.com/blog" target="_blank">Atlassian WorkLife Redesign</a></h3>
-			<a href="https://atlassian.com/blog" target="_blank"><img loading="lazy" src="project_atlassian.png" class="project-image"></a>
-			<p>I was part of the team that built the new Work Life blog website for Atlassian.</p>
-			
-			<h4>Scope</h4>
-			<ul>
-				<li>New design</li>
-				<li>Migration and consolidation of other brand blogs into one</li>
-				<li>Update to a custom WordPress Full-Site Editing (FSE) theme</li>
-				<li>Creation of plugins containing custom blocks</li>
-				<li>Migration of old custom blocks to their newer counterparts</li>
-				<li>Integration of AI Search</li>
-			</ul>
-			
-			<h4>My Contribution</h4>
-			<ul>
-				<li>Homepage</li>
-				<li>AI Search 3rd party API integration</li>
-				<li>Various new blocks</li>
-				<li>Migration of old blocks to new format</li>
-				<li>Migration and updating of form handling via 3rd party API</li>
-				<li>Creation of a custom plugin to batch-assign featured images from a pool of eligible media, set global fallback images, or assign eligible items by post type, category, and more</li>
-			</ul>
-			
-			<h3><a href="https://atlassian.com/blog/state-of-teams-2024" target="_blank">Atlassian WorkLife Landing Pages</a></h3>
-			<a href="https://atlassian.com/blog/state-of-teams-2024" target="_blank"><img loading="lazy" src="project_state-of-teams.png" class="project-image"></a>
-			<p>I got to flex my creative muscles building several highly-customized landing pages. I was responsible for all of the development: creating editable content areas in custom WordPress templates, incorporating custom CSS and JavaScript animations, and more — all while keeping accessibility and performance in mind.</p>
-			
-			<p>One of the most challenging sections, and the one I'm most proud of, is <a href="https://www.atlassian.com/blog/state-of-teams-2024#insights-and-tips">this section</a> of animated "playing cards" that shuffle and stick to the screen as a user scrolls. Check it out!</p>
-			
-			<h4>Scope</h4>
-			<ul>
-				<li>Creation of highly-customized landing pages with unique animations</li>
-				<li>Strict WCAG adherence</li>
-				<li>Fast and performant</li>
-			</ul>
-			
-			<h4>My Contribution</h4>
-			<ul>
-				<li>Owned 100% of the development</li>
-				<li>Used creative problem-solving to bring designers' vision to life</li>
-				<li>Wrote custom WordPress templates, CSS, and JavaScript</li>
-				<li>QA tested for browser compatibility and WCAG compliance</li>
-				<li>Regularly met with clients to deliver status updates</li>
-			</ul>
-			
-			<quote><p>"State of Teams has been internally pointed to as <em>'we want this.'</em>" - Atlassian Client</p></quote>
-			
-			<h3><a href="https://atlassian.com/blog" target="_blank">Atlassian WorkLife (other work)</a></h3>
-			<ul>
-				<li>Wrote a custom script to batch-migrate site users to a Guest Authors post type.
-					<ul>
-						<li>Enhanced security while retaining information tied to previous user accounts, including attribution for hundreds of authors across thousands of blog posts.</li>
-					</ul>
-				</li>
-			</ul>
-			
-			<h3><a href="https://upworthy.com" target="_blank">Upworthy</a> / <a href="https://good.is" target="_blank">GOOD</a></h3>
-			<div class="row">
-				<a href="https://upworthy.com" target="_blank"><img loading="lazy" src="project_upworthy.png" class="project-image"></a>
-				<a href="https://good.is" target="_blank"><img loading="lazy" src="project_good-is.png" class="project-image"></a>
+			<div class="project isOnScreen slide">
+				<h3><a href="https://ms.now" target="_blank">MS NOW</a></h3>
+				<a href="https://ms.now" target="_blank"><img loading="lazy" src="project_msnow.png" class="project-image"></a>
+				
+				
+				<p>I'm proud to have been part of the team that built the new ms.now website during MSNBC's rebrand.</p>
+				
+				<h4>Scope</h4>
+				<ul>
+					<li>Full website migration with new branding</li>
+					<li>Maintain performance</li>
+					<li>Empower editors with an intuitive, scalable website interface</li>
+					<li>Limit access based on user role</li>
+					<li>Implement a mechanism for live blogging</li>
+					<li>Integrate 3rd party data to continuously update election information in real-time</li>
+				</ul>
+				
+				<h4>My Contribution</h4>
+				<ul>
+					<li>Front-end and back-end build-out of the homepage, Rachel Maddow Show page, author archives and pages, and more
+						<ul>
+							<li>Translated designs into pixel-perfect front-end output, while building back-end templates that were simple and scalable for the MS NOW editorial team.</li>
+						</ul>
+					</li>
+				</ul>
+				
+				<h4>Challenges</h4>
+				<ul>
+					<li>Large number of stakeholders</li>
+					<li>Tight deadlines</li>
+					<li>Managing changing expectations</li>
+				</ul>
+				
+				<h4>Outcome</h4>
+				<ul>
+					<li>Users average 25 minutes per session</li>
+				</ul>
 			</div>
-			<h4>Background</h4>
-			<p>GOOD is a child theme of Upworthy — meaning page and block structures are shared, while other elements (fonts, colors, border and button styles, etc.) are unique to each site.</p>
+				
+			<div class="project isOnScreen slide">
+				<h3><a href="https://atlassian.com/blog" target="_blank">Atlassian WorkLife Redesign</a></h3>
+				<a href="https://atlassian.com/blog" target="_blank"><img loading="lazy" src="project_atlassian.png" class="project-image"></a>
+				<p>I was part of the team that built the new Work Life blog website for Atlassian.</p>
+				
+				<h4>Scope</h4>
+				<ul>
+					<li>New design</li>
+					<li>Migration and consolidation of other brand blogs into one</li>
+					<li>Update to a custom WordPress Full-Site Editing (FSE) theme</li>
+					<li>Creation of plugins containing custom blocks</li>
+					<li>Migration of old custom blocks to their newer counterparts</li>
+					<li>Integration of AI Search</li>
+				</ul>
+				
+				<h4>My Contribution</h4>
+				<ul>
+					<li>Homepage</li>
+					<li>AI Search 3rd party API integration</li>
+					<li>Various new blocks</li>
+					<li>Migration of old blocks to new format</li>
+					<li>Migration and updating of form handling via 3rd party API</li>
+					<li>Creation of a custom plugin to batch-assign featured images from a pool of eligible media, set global fallback images, or assign eligible items by post type, category, and more</li>
+				</ul>
+			</div>
 			
-			<h4>My Contribution</h4>
-			<ul>
-				<li>Homepage build-out</li>
-				<li>Custom block creation</li>
-				<li>Custom WP-Core block extension</li>
-				<li>Custom plugin creation to lazy load videos</li>
-			</ul>
+			<div class="project isOnScreen slide">
+				<h3><a href="https://atlassian.com/blog/state-of-teams-2024" target="_blank">Atlassian WorkLife Landing Pages</a></h3>
+				<a href="https://atlassian.com/blog/state-of-teams-2024" target="_blank"><img loading="lazy" src="project_state-of-teams.png" class="project-image"></a>
+				<p>I got to flex my creative muscles building several highly-customized landing pages. I was responsible for all of the development: creating editable content areas in custom WordPress templates, incorporating custom CSS and JavaScript animations, and more — all while keeping accessibility and performance in mind.</p>
+				
+				<p>One of the most challenging sections, and the one I'm most proud of, is <a href="https://www.atlassian.com/blog/state-of-teams-2024#insights-and-tips">this section</a> of animated "playing cards" that shuffle and stick to the screen as a user scrolls. Check it out!</p>
+				
+				<h4>Scope</h4>
+				<ul>
+					<li>Creation of highly-customized landing pages with unique animations</li>
+					<li>Strict WCAG adherence</li>
+					<li>Fast and performant</li>
+				</ul>
+				
+				<h4>My Contribution</h4>
+				<ul>
+					<li>Owned 100% of the development</li>
+					<li>Used creative problem-solving to bring designers' vision to life</li>
+					<li>Wrote custom WordPress templates, CSS, and JavaScript</li>
+					<li>QA tested for browser compatibility and WCAG compliance</li>
+					<li>Regularly met with clients to deliver status updates</li>
+				</ul>
+				
+				<quote class="isOnScreen slideLeft"><p>"State of Teams has been internally pointed to as <em>'we want this.'</em>" - Atlassian Client</p></quote>
+			</div>
+			
+			<div class="project isOnScreen slide">
+				<h3><a href="https://atlassian.com/blog" target="_blank">Atlassian WorkLife (other work)</a></h3>
+				<ul>
+					<li>Wrote a custom script to batch-migrate site users to a Guest Authors post type.
+						<ul>
+							<li>Enhanced security while retaining information tied to previous user accounts, including attribution for hundreds of authors across thousands of blog posts.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="project isOnScreen slide">
+				<h3><a href="https://upworthy.com" target="_blank">Upworthy</a> / <a href="https://good.is" target="_blank">GOOD</a></h3>
+				<div class="row">
+					<a href="https://upworthy.com" target="_blank"><img loading="lazy" src="project_upworthy.png" class="project-image"></a>
+					<a href="https://good.is" target="_blank"><img loading="lazy" src="project_good-is.png" class="project-image"></a>
+				</div>
+				<h4>Background</h4>
+				<p>GOOD is a child theme of Upworthy — meaning page and block structures are shared, while other elements (fonts, colors, border and button styles, etc.) are unique to each site.</p>
+				
+				<h4>My Contribution</h4>
+				<ul>
+					<li>Homepage build-out</li>
+					<li>Custom block creation</li>
+					<li>Custom WP-Core block extension</li>
+					<li>Custom plugin creation to lazy load videos</li>
+				</ul>
+			</div>
 		</div>
 		<hr class="bg-white"/>
 	</section>

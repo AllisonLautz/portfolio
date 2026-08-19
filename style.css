@@ -6,6 +6,10 @@ body {
 	font-family: lora;
 }
 
+section {
+	overflow: hidden;
+}
+
 h1, h2, h3, h4 {
 	font-family: montserrat;
 }
@@ -47,44 +51,12 @@ hr {
 	max-width: 660px;
 	margin: 0 auto;
 	width: 90%;
-	padding: 100px 0;
-}
-
-@keyframes fadeIn {
-	0% {
-			opacity: 0;
-	}
-	100% {
-			opacity: 1;
+	padding: 50px 0;
+	@media(min-width: 768px) {
+		padding: 100px 0;
 	}
 }
 
-*:has( > .group__inertia-scroll) {
-	position: relative;
-}
-
-.group__inertia-scroll {
-	min-height: 500px;
-}
-
-.group__inertia-scroll figure {
-	position: absolute;
-	transition: .5s cubic-bezier(.5,.5,.83,.67);
-	margin: 0;
-	width: 100%;
-}
-
-.group__inertial-scroll img {
-	
-	display: block;
-	width: 100%;
-	
-	animation-name: fadeIn;
-	animation-delay: 1.2s;
-	animation-fill-mode: both;
-	animation-timing-function: cubic-bezier(.5,.5,.83,.67);
-	animation-duration: .5s;
-}
 
 #intro {
 	font-family: montserrat;
@@ -102,6 +74,7 @@ hr {
     aspect-ratio: 1 / 1;
     border-radius: 100%;
     max-width: 384px;
+	width: 100%;
 }
 
 #intro h1 {}
@@ -135,9 +108,11 @@ quote {
 	background: #ffa8e869;
     display: block;
     /* padding: 100px 100px 175px; */
-	padding: 15% 15% 30%;
-    
+	padding: 5% 10% 30%;
     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+	@media(min-width: 768px) {
+		padding: 15% 15% 30%;
+	}
 }
 
 quote p {
@@ -157,7 +132,7 @@ quote + quote {
 }
 
 .wrapper .row {
-	flex-basis: 100%;
+	flex-basis: 100%;		
 	@media(min-width: 768px) {
 		max-width: calc(50% - .75rem);
 		flex-basis: calc(50% - .75rem);
@@ -191,8 +166,11 @@ quote + quote {
 	max-width: 100%;
 }
 
-#project-highlights h3:not(:first-of-type) {
-	margin-top: 100px;
+.project:not(:first-of-type) {
+	margin-top: 50px;
+	@media(min-width: 768px) {
+		margin-top: 100px;
+	}
 }
 
 footer .container {
